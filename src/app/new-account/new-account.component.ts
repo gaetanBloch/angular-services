@@ -8,7 +8,7 @@ import { Account } from '../shared/account.model';
   selector: 'app-new-account',
   templateUrl: './new-account.component.html',
   styleUrls: ['./new-account.component.css'],
-  providers: [LoggingService]
+  // providers: [LoggingService, AccountService]
 })
 export class NewAccountComponent {
 
@@ -16,7 +16,7 @@ export class NewAccountComponent {
   }
 
   onCreateAccount(accountName: string, accountStatus: string) {
-    this.loggingService.logStatusChanged(accountStatus);
+    // this.loggingService.logStatusChanged(accountStatus);
     this.accountService.addAccount(new Account(accountName, accountStatus));
   }
 }
